@@ -1,7 +1,34 @@
 {
-  "extends": ["local>brave/renovate-config"],
-  "labels": ["dependencies", "renovate"],
+  "extends": ["github>renovatebot/renovate-config:recommended"],
+  "labels": ["dependencies", "renovate", "security"],
   "draftPR": true,
   "prConcurrentLimit": 4,
-  "reviewersFromCodeOwners": true
+  "reviewersFromCodeOwners": true,
+  "vulnerabilityAlerts": true,
+  "snyk": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["vulnerability"],
+      "severity": "critical",
+      "labels": ["security-critical"],
+      "automerge": true,
+      "automergeType": "pr-comment",
+      "postUpgradeTasks": [
+        {
+          "commands": ["npm test", "npm run lint"],
+          "executionMode": "update"
+        }
+      ]
+    },
+    {
+      "matchPackageNames": ["fsevents", "bufferutil"],
+      "ignoreVulnerabilities": true
+    }
+  ],
+  "webhooks": [
+    {
+      "url": "https://your.monitoring.system/webhook ",
+      "events": ["vulnerability-found", "pr-created", "pr-merged"]
+    }
+  ]
 }
