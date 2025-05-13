@@ -1,5 +1,5 @@
 <!-- Add brave-browser issue below that this PR will resolve -->
-Resolves 
+Resolves https://github.com/brave/brave-browser/issues/ISSUE_NUMBER
 
 ## Submitter Checklist:
 
@@ -8,7 +8,12 @@ Resolves
 - [ ] Used Github [auto-closing keywords](https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue) in the PR description above
 - [ ] Wrote a good [PR/commit description](https://google.github.io/eng-practices/review/developer/cl-descriptions.html)
 - [ ] Added appropriate labels (`QA/Yes` or `QA/No`; `release-notes/include` or `release-notes/exclude`; `OS/...`) to the associated issue
-- [ ] Checked the PR locally: `npm run test -- brave_browser_tests`, `npm run test -- brave_unit_tests`, `npm run lint`, `npm run gn_check`, `npm run tslint`
+- [ ] Checked the PR locally: 
+  - [ ] `npm run test -- brave_browser_tests`
+  - [ ] `npm run test -- brave_unit_tests`
+  - [ ] `npm run lint`
+  - [ ] `npm run gn_check`
+  - [ ] `npm run tslint`
 - [ ] Ran `git rebase master` (if needed)
 
 ## Reviewer Checklist:
@@ -23,17 +28,22 @@ Resolves
 
 ## After-merge Checklist:
 
-- [ ] The associated issue milestone is set to the smallest version that the
-  changes has landed on
+- [ ] The associated issue milestone is set to the smallest version that the changes have landed on
 - [ ] All relevant documentation has been updated, for instance:
-  - [ ] https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)
-  - [ ] https://github.com/brave/brave-browser/wiki/Proxy-redirected-URLs
-  - [ ] https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections
-  - [ ] https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes
-  - [ ] https://github.com/brave/brave-browser/wiki/Custom-Headers
-  - [ ] https://github.com/brave/brave-browser/wiki/Web-Compatibility-Exceptions-in-Brave
-  - [ ] https://github.com/brave/brave-browser/wiki/QA-Guide
-  - [ ] https://github.com/brave/brave-browser/wiki/P3A
-  - [ ] https://github.com/brave/brave-browser/wiki/Brave-Wallet
+  - [ ] [Deviations from Chromium](https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove))
+  - [ ] [Proxy redirected URLs](https://github.com/brave/brave-browser/wiki/Proxy-redirected-URLs)
+  - [ ] [Fingerprinting Protections](https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections)
+  - [ ] [Brave's Use of Referral Codes](https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes)
+  - [ ] [Custom Headers](https://github.com/brave/brave-browser/wiki/Custom-Headers)
+  - [ ] [Web Compatibility Exceptions](https://github.com/brave/brave-browser/wiki/Web-Compatibility-Exceptions-in-Brave)
+  - [ ] [QA Guide](https://github.com/brave/brave-browser/wiki/QA-Guide)
+  - [ ] [P3A](https://github.com/brave/brave-browser/wiki/P3A)
+  - [ ] [Brave Wallet](https://github.com/brave/brave-browser/wiki/Brave-Wallet)
 
 ## Test Plan:
+<!-- Describe how you tested your changes -->
+<!-- Include steps to reproduce, expected behavior, and any relevant screenshots -->
+
+## Impact:
+<!-- Describe the impact of these changes (bugfix, feature, etc) -->
+<!-- Include which users will be affected and how -->
